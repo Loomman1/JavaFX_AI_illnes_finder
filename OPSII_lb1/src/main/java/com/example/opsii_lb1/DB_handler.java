@@ -17,7 +17,7 @@ public class DB_handler {
     public static void connectionEstablish()
     {
         try{
-        con = DriverManager.getConnection(connect, "postgres", "qWe159$dF");
+        con = DriverManager.getConnection(connect, "postgres", "password");
         } catch (Exception e) {
             e.printStackTrace();
         }
