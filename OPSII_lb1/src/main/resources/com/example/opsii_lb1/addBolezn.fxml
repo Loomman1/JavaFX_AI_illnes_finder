@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="640.0" prefWidth="909.0"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.opsii_lb1.AddBoleznController">
+   <children>
+      <TextField fx:id="NewBoleznID" layoutX="753.0" layoutY="75.0" />
+      <Label layoutX="759.0" layoutY="46.0" text="Введите индекс болезни:" />
+      <Label layoutX="744.0" layoutY="115.0" text="Введите название болезни:" />
+      <TextField fx:id="NewBoleznName" layoutX="752.0" layoutY="139.0" prefHeight="26.0" prefWidth="150.0" />
+      <TableView fx:id="AddedSymptoms" layoutX="14.0" layoutY="189.0" prefHeight="392.0" prefWidth="416.0">
+        <columns>
+          <TableColumn fx:id="AddedSympID" prefWidth="34.4000244140625" text="C1" />
+          <TableColumn fx:id="AddedSympName" prefWidth="215.99993896484375" text="C2" />
+            <TableColumn fx:id="dov" onEditCancel="#editDovCancel" onEditCommit="#editDovCommit" onEditStart="#editDovFunction" prefWidth="75.0" text="С3" />
+            <TableColumn fx:id="nedov" onEditCancel="#editNedovCancel" onEditCommit="#editNedovCommit" onEditStart="#editNedovFunction" prefWidth="75.0" text="С4" />
+        </columns>
+      </TableView>
+      <Label layoutX="161.0" layoutY="79.0" text="Симптомы болезни:" />
+      <Button fx:id="AddSymptomB" layoutX="512.0" layoutY="139.0" mnemonicParsing="false" onMouseClicked="#addSymptom" text="&lt;-Добавить симптом" />
+      <TableView fx:id="SymptomList" layoutX="455.0" layoutY="189.0" prefHeight="392.0" prefWidth="253.0">
+        <columns>
+          <TableColumn fx:id="SymptomListID" prefWidth="39.20001220703125" text="C1" />
+          <TableColumn fx:id="SymptomListName" prefWidth="196.0" text="C2" />
+        </columns>
+      </TableView>
+      <Button fx:id="Ready" layoutX="809.0" layoutY="526.0" mnemonicParsing="false" onMouseClicked="#ReadyClick" text="Готово!" />
+      <Button fx:id="MoveToRightButton" layoutX="188.0" layoutY="139.0" mnemonicParsing="false" onMouseClicked="#MoveToRightClick" text="Убрать симптом -&gt;" />
+   </children>
+</AnchorPane>

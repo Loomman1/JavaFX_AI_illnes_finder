@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="687.0" prefWidth="921.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.opsii_lb1.EditBoleznController">
+   <children>
+      <TableView fx:id="BoleznSympList" layoutX="43.0" layoutY="219.0" prefHeight="367.0" prefWidth="250.0">
+        <columns>
+          <TableColumn fx:id="BoleznSympID" prefWidth="47.19997787475586" text="C1" />
+          <TableColumn fx:id="BoleznSympName" prefWidth="185.6000213623047" text="C2" />
+        </columns>
+      </TableView>
+      <Label fx:id="BoleznName" layoutX="356.0" layoutY="65.0" text="Имя болезни">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <TableView fx:id="AllSymps" layoutX="356.0" layoutY="219.0" prefHeight="367.0" prefWidth="500.0">
+        <columns>
+          <TableColumn fx:id="AllSympsID" prefWidth="52.0" text="C1" />
+          <TableColumn fx:id="AllSympsName" prefWidth="227.99993896484375" text="C2" />
+            <TableColumn fx:id="dov" onEditCancel="#editDovCancel" onEditCommit="#editDovCommit" onEditStart="#editDovFunction" prefWidth="85.60003662109375" text="C3" />
+            <TableColumn fx:id="nedov" onEditCancel="#editNedovCancel" onEditCommit="#editNedovCommit" onEditStart="#editNedovFunction" prefWidth="116.0" text="C4" />
+        </columns>
+      </TableView>
+      <Button fx:id="ShiftSymptomButton" layoutX="109.0" layoutY="156.0" mnemonicParsing="false" onMouseClicked="#LeftShiftButtonClicked" text="Перекинуть симптом-&gt;" />
+      <Label layoutX="454.0" layoutY="189.0" text="Симптомы болезни:" />
+      <Button fx:id="RightShiftSymptom" layoutX="443.0" layoutY="156.0" mnemonicParsing="false" onMouseClicked="#RightShiftButtonClicked" text="&lt; - Перекинуть симптом" />
+      <Button fx:id="FinishButton" layoutX="718.0" layoutY="143.0" mnemonicParsing="false" onMouseClicked="#SaveChanges" text="Сохранить изменения" />
+   </children>
+</AnchorPane>
